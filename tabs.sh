@@ -12,7 +12,6 @@ tabs() {
 }
 
 spaces() {
-
     printf ":set number\n"        > "$VIMRC" # show line numbers
     printf ":set ai\n"           >> "$VIMRC" # auto-indentation
     printf ":set shiftwidth=4\n" >> "$VIMRC" # indentation level is 4 spaces
@@ -22,6 +21,6 @@ spaces() {
 }
 
 vmake() {
-        tabs > /dev/null && vim make && spaces > /dev/null
+    tabs > /dev/null && vim make && spaces > /dev/null
 }
 alias makedit="vmake"
