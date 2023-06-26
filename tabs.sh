@@ -12,10 +12,16 @@ tabs() {
 }
 
 spaces() {
-    printf ":set number\n"      > "$VIMRC" # show line numbers
-    printf ":set ai\n"         >> "$VIMRC" # auto-indentation
-    printf ":set shiftwidth=4" >> "$VIMRC" # indentation level is 4 spaces
-    printf ":set expandtab\n"  >> "$VIMRC" # expand tabs to use spaces
-    printf ":set tabstop=4\n"  >> "$VIMRC" # tabs occupy 4 spaces
+
+    printf ":set number\n"        > "$VIMRC" # show line numbers
+    printf ":set ai\n"           >> "$VIMRC" # auto-indentation
+    printf ":set shiftwidth=4\n" >> "$VIMRC" # indentation level is 4 spaces
+    printf ":set expandtab\n"    >> "$VIMRC" # expand tabs to use spaces
+    printf ":set tabstop=4\n"    >> "$VIMRC" # tabs occupy 4 spaces
     printf "\ntab set to four spaces\n\n"
 }
+
+vmake() {
+        tabs > /dev/null && vim make && spaces > /dev/null
+}
+alias makedit="vmake"
