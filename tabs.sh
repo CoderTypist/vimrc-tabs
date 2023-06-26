@@ -12,7 +12,6 @@ tabs() {
 }
 
 spaces() {
-
     printf ":set number\n"      > "$VIMRC" # show line numbers
     printf ":set ai\n"         >> "$VIMRC" # auto-indentation
     printf ":set shiftwidth=4" >> "$VIMRC" # indentation level is 4 spaces
