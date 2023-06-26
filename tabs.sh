@@ -21,6 +21,6 @@ spaces() {
 }
 
 vmake() {
-    tabs > /dev/null && vim make && spaces > /dev/null
+    tabs > /dev/null && vim makefile && spaces > /dev/null
 }
 alias makedit="vmake"
